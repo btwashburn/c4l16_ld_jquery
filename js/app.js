@@ -81,12 +81,12 @@
             if (entity[prop].length > 0) {
               if ($.isArray(entity[prop])) {
                 var str = "";
-                str += "<p>"+labels[prop]+":</p>";
-                str += "<ul>";
+                str += "<h4>"+labels[prop]+":</h4>";
+                str += "<div class=\"list-group\">";
                 $.each(entity[prop], function( index, value ) {
-                  str += "<li>"+value+"</li>";
+                  str += "<div class=\"list-group-item\">"+value+"</div>";
                 });
-                str += "</ul>";
+                str += "</div>";
                 $("#"+prop).html(str);
               } else {
                 $("#"+prop).html(labels[prop] + ": " + entity[prop]);
