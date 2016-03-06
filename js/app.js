@@ -19,9 +19,7 @@
         kb = $rdf.graph();
         
         // remove previously-set values in the UI
-        $.each(properties, function( pindex, prop ) {
-          $("#"+prop).html("");
-        });
+        $("#record").html("");
         
         // get RDF data
         fetchRdf();
@@ -102,24 +100,28 @@
       
       // show linked data properties
       function showLdProperties() {
+        var str = "";
         $.each(properties, function( pindex, prop ) {
           if (entity.hasOwnProperty(prop)) {
             if (entity[prop].length > 0) {
+              str += "<div class=\"row\">";
+              str += "<div class=\"col-md-2\">";
+              str += "<h4 class=\"pull-right\">"+labels[prop]+"</h4>";
+              str += "</div>";
+              str += "<div class=\"col-md-10\">";
               if ($.isArray(entity[prop])) {
-                var str = "";
-                str += "<h4>"+labels[prop]+":</h4>";
-                str += "<div class=\"list-group\">";
                 $.each(entity[prop], function( index, value ) {
-                  str += "<div class=\"list-group-item\">"+value+"</div>";
+                  str += "<h4>"+value+"</h4>";
                 });
-                str += "</div>";
-                $("#"+prop).html(str);
               } else {
-                $("#"+prop).html(labels[prop] + ": " + entity[prop]);
+                str += "<h4>"+entity[prop]+"</h4>";
               }
+              str += "</div>";
+              str += "</div>";
             }
           } 
         });
+        $("#record").html(str);
       } // end function showLdProperties
       
       // On ready
