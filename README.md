@@ -25,4 +25,4 @@ To run the app, point your web browser at the localhost address where these inst
 
 [http://localhost/c4l16_ld_jquery/](http://localhost/c4l16_ld_jquery/)
 
-Note that the index.html will look for the rdflib.js dependency in the path node_modules/rdflib/dist/rdflib.js.  If you have installed rdflib.js in another path on your system, provide its webserver accessible path in the index.html file.
+Note that the "index.html" file will look for the rdflib.js dependency as a relative path "node_modules/rdflib/dist/" under the root path where the application was installed.  If you have moved rdflib.js in another path on your system, make sure that its location is accessible by browsers through your web serverm, and edit the index.html path to the library accordingly.
