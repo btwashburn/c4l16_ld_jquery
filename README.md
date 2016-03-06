@@ -4,7 +4,7 @@ A demonstration application using JQuery and rdflib.js to parse and display Link
 
 ## Installation
 
-### Step 1: Install from GitHub
+### Step 1: Clone the repository from GitHub
 
 In a Terminal Window
 
@@ -13,10 +13,16 @@ $ cd {YOUR-APACHE-DOCUMENT-ROOT}
 $ git clone https://github.com/btwashburn/c4l16_ld_jquery.git
 $ cd c4l16_ld_jquery
 ```
-This demonstration application includes a local copy of the browser version of rdflib.js, in the application's js path, which is referenced by index.html when the page loads in the browser.  
+### Step 2: Install rdflib.js
+
+The dependency on rdflib.js is specified in the package.json file.  To install, use the Node Package Manager:
+
+```npm install```
 
 ## Usage
 
 To run the app, point your web browser at the localhost address where these instructions will install it by default. 
 
 [http://localhost/c4l16_ld_jquery/](http://localhost/c4l16_ld_jquery/)
+
+Note that the index.html will look for the rdflib.js dependency in the path node_modules/rdflib/dist/rdflib.js.  If you have installed rdflib.js in another path on your system, provide its webserver accessible path in the index.html file.
