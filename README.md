@@ -13,18 +13,7 @@ $ cd {YOUR-APACHE-DOCUMENT-ROOT}
 $ git clone https://github.com/btwashburn/c4l16_ld_jquery.git
 $ cd c4l16_ld_jquery
 ```
-
-### Step 2: Install NPM
-Go to http://nodejs.org/ download and install Node.js
-
-### Step 3: Use NPM to install the rdflib.js
-
-
-```bash
-$ npm install rdflib
-```
-
-[NPM](https://www.npmjs.com/) is a dependency management library for Javascript. It is used to install the required rdflib.js library for testing and parsing RDF data. 
+This demonstration application includes a local copy of the browser version of rdflib.js, in the application's js path, which is referenced by index.html when the page loads in the browser.  
 
 ## Usage
 
