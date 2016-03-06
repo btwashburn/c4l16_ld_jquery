@@ -1,0 +1,9 @@
+{
+  "name": "c4l2016_ld_jquery",
+  "description": "Demonstration app using rdflib.js to consume RDF Linked Data",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "rdflib": "0.*"
+  }
+}
